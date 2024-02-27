@@ -3,4 +3,16 @@ main {
 	flex-direction: column;
 	padding: 2rem;
 	box-sizing: border-box;
+	gap: 1rem;
+
+	& section {
+		display: flex;
+		flex-direction: column;
+		gap: .5rem;
+
+		& > p, strong, br {
+			margin: 0;
+			padding: 0;
+		}
+	}
 }

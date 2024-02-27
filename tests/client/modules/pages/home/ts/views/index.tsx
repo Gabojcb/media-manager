@@ -1,11 +1,12 @@
 import * as React from 'react';
 import { MaterialExample } from '../components/draggable';
+import { Steps } from './steps';
 
 export /*bundle*/
 function View() {
 	return (
 		<main>
-			<h2>Uploader</h2>
+			<Steps />
 			<MaterialExample />
 		</main>
 	);
