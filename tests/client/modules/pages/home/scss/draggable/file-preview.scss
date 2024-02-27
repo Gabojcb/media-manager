@@ -1,0 +1,103 @@
+.drop-file-preview {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-sizing: border-box;
+  
+    &__title {
+      text-align: center;
+    }
+    &__content {
+      max-height: 150px;
+      overflow: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+  
+      &::-webkit-scrollbar {
+        width: 10px;
+        background-color: var(--surface-container);
+      }
+  
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--primary);
+        border-radius: var(--border-radius-base);
+      }
+    }
+  }
+  .drop-file-preview p {
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  .drop-file-preview__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--surface-bright);
+    padding: 15px 0px;
+    -moz-column-gap: 16px;
+    column-gap: 16px;
+    border-radius: var(--border-radius-base);
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    max-width: 400px;
+    & .content-header {
+      min-width: 100%;
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      justify-content: center;
+       img {
+        width: 45px;
+        margin-right: 20px;
+      }
+      
+      .drop-file-preview__item__del {
+
+        max-width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: var(--on-surface);
+        width: 100%;
+        position: absolute;
+        right: 0;
+        transition: background 0.3s ease-in-out;
+        
+        &:hover {
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+          background-color: var(--surface-container);
+          opacity: 1;
+        }
+      }
+    }
+  }
+  
+  .drop-file-preview__item__info {
+    display: grid;
+    transition: 300ms ease-in-out;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    row-gap: 8px;
+    min-width: 150px;
+    box-sizing: border-box;
+    background-color: var(--surface-variant);
+    box-shadow: 0px 2px 8px #58585833;
+    border-radius: var(--border-radius-base);
+    padding: .5rem;
+    width: 100%;
+    p, strong {
+      margin: 0;
+      font-size: 14px;
+      word-break: break-all;
+    }
+  }
+  
